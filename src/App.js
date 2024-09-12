@@ -4,6 +4,8 @@ import { Shop } from './pages/shop/shop';
 import { Cart } from './pages/cart/cart';
 import { ShopContextProvider } from './context/shop-context'; 
 
+import {Footer} from './components/footer'
+
 import {
     BrowserRouter as Router,
     Route,
@@ -21,7 +23,9 @@ export const App = () => {
                         <Route path="/" element={<Shop/>}/>
                         <Route path="/cart" element={<Cart/>}/>
                     </Routes>
+                    <Footer/>
                 </Router>
+
             </ShopContextProvider>
         </div>
     )
