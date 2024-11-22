@@ -23,7 +23,9 @@ export const App = () => {
                         <Route path="/" element={<Shop/>}/>
                         <Route path="/cart" element={<Cart/>}/>
                     </Routes>
-                    <Footer/>
+            <section className='section-footer'>
+                <Footer/>
+            </section>
                 </Router>
 
             </ShopContextProvider>

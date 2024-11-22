@@ -1,12 +1,16 @@
 .shop{
     margin-bottom: 100px;
+    height: auto;
 }
 .shopTitle {
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
     font-size: 40px;
+    background-image: url(../../assets/531f7c4d7468f62a79cd40b5b1b8f318.jpg);
+    background-size: 50px 40px;
 
 }
+
 .products {
     width: 98%;
     height: auto;
