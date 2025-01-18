@@ -1,23 +1,25 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { LoadingContext } from '../../context/loading-context'
+import { Spinner } from '../spinner'
 import { PRODUCTS } from '../../products'
 import { Products } from './products'
-import "./shop.css"
+
 
 
 
 
 export const Shop = () => {
+    const {isLoading} = useContext(LoadingContext)
     return (
         <div className='shop'>
-            <div className='m-10 bg-gradient-to-r from-gray-700 to-gray-200"' >
-                <h1 className='font-bold text-3xl text-center'>Nike's Store</h1>
-            </div>
-            <div className='products'>
+            {isLoading ? <Spinner/> : 
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-3'>
                 {PRODUCTS.map((product)=>(
                     <Products data={product} />
                 ))}
 
             </div>
+            }
         </div>
     )
 }
